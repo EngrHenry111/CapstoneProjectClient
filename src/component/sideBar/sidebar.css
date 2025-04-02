@@ -1,0 +1,83 @@
+.sidebar{
+    flex: 3;
+    margin: 20px;
+    padding: 3px;
+    background-color: #f8eded;
+    background-repeat: 10px;
+}
+
+.sidebarItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebarTitle{
+    margin: 10px;
+    padding: 5px;
+    width: 80px;
+    border-top: 1px solid #a7a4a4;
+    border-bottom: 1px solid #a7a4a4;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: #222;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+}
+
+.sideImg{
+    width: 150px;
+    border-radius: 20%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    
+}
+
+p{
+    padding: 20px;
+    font-size: 17px;
+}
+
+.sidebarList{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.sidebarListItem{
+    display: inline-block;
+    width: 50%;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.sidebarSocial{
+    margin-top: 15px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebarIcon{
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+#face{
+    color: rgb(7, 6, 88);
+}
+
+#wats{
+    color: green;
+}
+
+#twit{
+    color: lightblue;
+}
+
+#insta{
+    color: rgb(133, 26, 8)
+}
