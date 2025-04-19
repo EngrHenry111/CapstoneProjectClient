@@ -12,6 +12,12 @@ export const Write = () => {
                 <input type="file" id="fileInput" style={{display: "none"}}/>
                 <input type="text" placeholder="Title" className="writeInput"
                 autoFocus={true} />
+          
+
+                <input type="text" placeholder="SubTitle" className="writeInput"
+                autoFocus={true} />
+
+                               
             </div>
 
             <div className="writeFormGroup">
