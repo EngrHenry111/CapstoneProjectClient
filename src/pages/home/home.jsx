@@ -12,6 +12,6 @@ export const Home = () => {
        <Posts/>
        <Sidebar/>
     </div>
-        </>
+    </>
   )
 }

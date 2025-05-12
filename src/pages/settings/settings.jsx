@@ -1,5 +1,5 @@
 
-import { Sidebar } from "../../../component/sideBar/sidebar"
+import { Sidebar } from "../../component/sideBar/sidebar"
 import "./settings.css"
 export const Settings = () => {
   return (

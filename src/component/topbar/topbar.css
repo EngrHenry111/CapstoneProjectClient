@@ -1,13 +1,14 @@
 .top{
     width: 100%;
-    height: 50px;
-    background-color: rgb(240, 250, 250);
+    height: 60px;
+    background-color: rgb(205, 230, 230);
     position: sticky;
     top: 0;
     display: flex;
     align-items: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    z-index: 999;
+    z-index: 1000;
+
 }
 
 .top_l,.top_r{
@@ -23,7 +24,7 @@
 
 
 .topIcon{
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 20px;
     color: #444;
     cursor: pointer;
@@ -49,7 +50,7 @@
     margin-left: 20px;
     font-size: 15px;
     font-weight: 400;
-    color: #4444;
+    color: #0e0350b7;
     font-family: 'Times New Roman', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     cursor: pointer;
 
@@ -60,4 +61,21 @@
     color: #666;
     cursor: pointer;
     margin-left: 15px;
+}
+
+
+#face{
+    color: rgb(7, 6, 88);
+}
+
+#wats{
+    color: green;
+}
+
+#twit{
+    color: lightblue;
+}
+
+#insta{
+    color: rgb(133, 26, 8)
 }

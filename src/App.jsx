@@ -1,78 +1,57 @@
 
-
-import { useState, useEffect } from 'react'
-import { Topbar } from './component/topbar/topbar'
-import {Home} from './pages/home/home'
-import { Single } from './pages/single/single'
-import { Write } from './pages/write/write'
-import { Settings } from './pages/write/settings/settings'
-import { Login } from './pages/login/login'
-import { Register } from './pages/register/register'
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { SinglePost } from './component/singlePost/singlePost'
-import { Post } from './component/post/post'
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, } from 'react-router-dom';
+import { Topbar } from './component/topbar/topbar';
+import { Home } from './pages/home/home';
+import { Single } from './pages/single/single';
+import { Write } from './pages/write/write';
+import { Settings } from './pages/settings/settings';
+import { Login } from './pages/login/login';
+import { Register } from './pages/register/register';
 
 
-  
-  function App() {
-  //   const [user, setUser] = useState(null);
-  //   const navigate = useNavigate();
+function App() {
+  const [user, setUser] = useState(() => {
+  try  {
+    const savedUser = localStorage.getItem("user");
+    if(!savedUser || savedUser === "undefined") return null;
+    return JSON.parse(savedUser);
+    }catch (error){
+      console.error("Failed to parse user from localStorage:", error);
+      return null;
+    }
+  });
 
-  //   useEffect(() => {
-  //     // Check if user data exists in localStorage (or could be fetched from API)
-  //     const storedUser = JSON.parse(localStorage.getItem('user'));
-  
-  //     if (storedUser) {
-  //       setUser(storedUser); // Set the user if found in localStorage
-  //     }
-  //   }, []);
-  
-    // // Example for dynamic navigation
-    // const handleNavigate = () => {
-    //   if (user) {
-    //     navigate(`/upload/${user._id}`); // Navigate to dynamic user route
-    //   } else {
-    //     navigate('/login'); // If user is not logged in, redirect to login page
-    //   }
-    // };
-
-   const user =false;
   return (
-   
-   
     <Router>
-    <Topbar />
-
-
-
-    <Routes>
-      <Route exact path="/" element={<Home />} />
-    </Routes>
-    
-    <Routes>
-      <Route path="/register" element=
-      {user ? <Home/>:<Register />} />
-    </Routes>
-
-    <Routes>
-      <Route path="/login" element={ user? <Home/> :<Login />} />
-    </Routes>
-
-    <Routes>
-      <Route path="/write" element={user? <Write/>:<Register />} />
-    </Routes>
-
-    <Routes>
-      <Route path="/settings" element={user? <Settings/>:<Register />} />
-    </Routes>
-
-    <Routes>
-      <Route path="/post/:postId" element={<Single />} />
-    </Routes>
-
-   
-  </Router>
-  )
+      <Topbar user={user} setUser = {setUser} />
+      <Routes>
+        {!user ? (
+          <>
+            <Route path="/" element={<Login setUser={setUser} />} />
+            <Route path="/register" element={<Register setUser={setUser} />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </>
+        ) : (
+          <>
+            <Route path="/" element={<Home />} />
+            <Route path="/write" element={<Write />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="/post/:postId" element={<Single />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </>
+        )}
+      </Routes>
+  
+    </Router>
+  );
 }
 
-export default App
+
+
+export default App;
+
+
+// const [user, setUser] = useState(() => {
+//   const savedUser = localStorage.getItem("user");
+//   return savedUser ? JSON.parse(savedUser) : null;

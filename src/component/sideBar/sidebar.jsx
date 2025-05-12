@@ -22,6 +22,9 @@ export const Sidebar = () => {
         <li className="sidebarListItem">Style</li>
         <li className="sidebarListItem">Sport</li>
         <li className="sidebarListItem">Tech</li>
+        <li className="sidebarListItem">Engineering</li>
+        <li className="sidebarListItem">Mathematics</li>
+        <li className="sidebarListItem">Physics</li>
       </ul>
       </div>
 

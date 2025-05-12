@@ -1,46 +1,52 @@
 import React from 'react'
 import  './topbar.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
-export const Topbar = () => {
+export const Topbar = ({user, setUser}) => {
+  const navigate = useNavigate();
 
-  const user = false;
+  const handleLogout = ()=> {
+    localStorage.removeItem("user");
+    setUser(null);
+    navigate("/login"); 
+    //navigate("/register");
+  }
+
+ 
   return (
     <div className='top'>
       <div className="top_l">
-        <i class="topIcon fa-brands fa-facebook"></i>
-        <i class="topIcon fa-brands fa-whatsapp"></i>
-        <i class="topIcon fa-brands fa-twitter"></i>
-        <i class="topIcon fa-brands fa-instagram"></i>
-
+        <i id='face' class="topIcon  fa-brands fa-facebook"></i>
+        <i id='wats'  class="topIcon fa-brands fa-whatsapp"></i>
+        <i id='twit'  class="topIcon fa-brands fa-twitter"></i>
+        <i id='insta'  class="topIcon fa-brands fa-instagram"></i>
      </div> 
 
-      <div className="top_c">
+     <div className="top_c">
         <ul className='topList'>
 
-          <li className='topListItem'>
-            <Link className='link' to='/'> HOME </Link>
+        <li className='topListItem'>
+       <Link className='link' to='/home'> HOME </Link>
+        </li>
+
+          <li className= 'topListItem'>
+        <Link className= 'link' to='/write'> WRITE </Link>
           </li>
 
-          <li className='topListItem'>      
-              <Link className='link' to='/'> ABOUT </Link>
-              </li>
+          <li className =  'topListItem'>
+        <Link className = 'link' to='/settings'> UPDATE </Link>
+          </li> 
 
-          <li className='topListItem'>
-          <Link className='link' to='/write'> WRITE </Link>
+           
+          <li className = 'topListItem' onClick={handleLogout} >
+          {user ? "LOGOUT": ""} 
           </li>
 
-          <li className='topListItem'>
-          <Link className='link' to='/settings'> UPDATE </Link>
-          </li>
-
-
-          <li className='topListItem'>
-          {user && "LOGOUT"}
-          </li>
         </ul>
       </div> 
+    
+    
 
       <div className="top_r">
         {
@@ -48,7 +54,7 @@ export const Topbar = () => {
             <img className='topImage' 
             src = "/images/image.jpg" alt="" />
           ) :
-            (
+             (
             <ul className='topList'>
              <li className='topListItem'> 
               <Link className='link' to='/login'> 
@@ -64,7 +70,7 @@ export const Topbar = () => {
            
             </ul>
 
-          )
+         )
         }
        
         <i  className="topSeachIcon  fa-solid fa-magnifying-glass"></i>
@@ -72,3 +78,6 @@ export const Topbar = () => {
     </div>
   )
 }
+
+
+
