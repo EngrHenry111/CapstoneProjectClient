@@ -35,7 +35,7 @@ export const Register = () => {
       // Redirect to wherever you want
       navigate(`/login`);
     } catch (error) {
-      console.error("Signup failed:", error.response?.data || error.message);
+      console.error("Signup failed:", error.response?.user || error.message);
       alert(error.response?.data?.message || "Signup failed. Please try again.");
     }
   };

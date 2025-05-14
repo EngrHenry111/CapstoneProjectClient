@@ -32,11 +32,9 @@
 }
 
 .registerButtonContainer{
-    
     position: relative;
     margin-right: 100px;
     cursor: pointer;
-  
     background-color: teal;
     border: none;
     color: white;

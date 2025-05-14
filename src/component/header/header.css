@@ -1,3 +1,5 @@
+
+
 .header{
     margin-top: 50px;
     margin-left: 0px;
@@ -15,7 +17,7 @@
 .headerTitleSm{
     position: absolute;
     top: 16%;
-    font-size: 20px;
+    font-size: 30px;
     color: teal;
 
 }
