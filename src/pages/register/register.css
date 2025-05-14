@@ -12,6 +12,7 @@
 
 .registerTitle{
     font-size: 50px;
+     color: #0e0350b7;
 }
 
 .registerForm{
@@ -24,6 +25,8 @@
 
 .registerForm>label{
     margin: 10px 4px;
+     color: #0e0350b7;
+     font-weight: 700;
 
 }
 
@@ -48,7 +51,7 @@
 
 .registerLoginButton{
     position: absolute;
-    top: 60px;
+    top: 100px;
     right: 40px;
     width: 100px;
     background-color: lightcoral;
@@ -65,76 +68,3 @@
 
 
 
-
-/* * {
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-
-  }
-  
-  .register {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("/images/book.avif");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .registerTitle {
-    font-size: 50px;
-    color: rgb(6, 156, 156);
-  }
-  
-  .registerForm {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .registerForm > label {
-    margin: 10px 0;
-    color: rgb(4, 117, 117);
-  }
-  
-  .registerInput {
-    padding: 10px;
-    background-color : white;
-    border: none;
-    color: rgb(6, 160, 160);
-  }
-  
-  .registerButton {
-   
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: teal;
-    border: none;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-  }
-  
-  .registerLoginButton{
-    position: absolute;
-    top: 60px;
-    right: 40px;
-    background-color: lightcoral;
-    color: white;
-    cursor: pointer;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-   */

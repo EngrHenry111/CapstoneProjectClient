@@ -17,6 +17,20 @@ export const Post = () => {
       .catch((error) => console.error(error));
   }, []);
 
+  const handleDelete = async (postId) => {
+    try {
+      //await axios.delete(`https://capstoneprojectserver-1.onrender.com/deletePost/${postId}`);
+   await axios.delete(`https://capstoneprojectserver-1.onrender.com/posts/deletePost/${postId}`);
+
+
+      setPosts(posts.filter(post => post._id !== postId)); // update UI
+      alert("Post deleted!");
+    } catch (error) {
+      console.error("Delete error:", error);
+      alert("Failed to delete post.");
+    }
+  };
+
   return (
     <div  >
       {posts?.map(post => (
@@ -42,6 +56,13 @@ export const Post = () => {
            <span className="postDate">
               {new Date(post?.createdAt).toDateString()}
             </span>
+
+             <button
+            className="deleteButton"
+            onClick={() => handleDelete(post._id)}
+          >
+            Delete
+          </button>
         </div>
       ))}
     </div>
