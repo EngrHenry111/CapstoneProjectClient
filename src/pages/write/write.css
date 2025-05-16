@@ -1,7 +1,7 @@
 
 .write{
     padding-top: 50px;
-    width: 100%;
+    width: 100vw;
 
 }
 
@@ -60,18 +60,29 @@ img{
 
 .writeSub{
     position: absolute;
-    top: 30px;
-    right: 115px;
+    top: 10px;
+    right: 100px;
     padding: 10px;
+    width: 100px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
-    background-color: rgb(114, 228, 114);
+    font-size: 30px;
+    background-color: lightcoral;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 500;
+    font-weight: 1000;
     color: whitesmoke;
+    letter-spacing: 2px;
+    transition: 5s;
+   
+   
 
 
 
+}
+
+.writeSub:hover{
+    color: teal;
+    
+   
 }

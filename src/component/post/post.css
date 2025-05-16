@@ -61,6 +61,13 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  transition-duration: 5s;
+
+}
+
+.deleteButton:hover{
+    background: rgb(243, 84, 26);
+    opacity: .8;
 }
 
 
