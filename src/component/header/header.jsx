@@ -9,7 +9,7 @@ export const Header = () => {
        </div>
 
       <img className='headerImg'
-       src="/images/codeEditor3.png" alt="" />
+       src="/images/blogging1.png" alt="" />
 
     </div>
   )

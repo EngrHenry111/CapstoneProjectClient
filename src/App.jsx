@@ -34,7 +34,7 @@ function App() {
           </>
         ) : (
           <>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home/>} />
             <Route path="/write" element={<Write />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/post/:postId" element={<Single />} />

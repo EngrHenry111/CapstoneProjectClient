@@ -5,11 +5,11 @@ export const Sidebar = () => {
     <div className='sidebar'>
       <div className="sidebarItem">
         <span className="sidebarTitle">About Me</span>
-        <img className='sideImg' src="/images/image.jpg" alt="" />
+        <img className='sideImg' src="/images/blogging1.png" alt="" />
         <p>
      
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Ad consequatur consequuntur molestiae iure atque amet
+       A simple functional blogging platform where you can create and manage articles, 
+       upload images, engage in a relevant content.
           
         </p>
       </div>

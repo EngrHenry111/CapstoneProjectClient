@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(226, 96, 96, 0.5) ,rgba(255,255, 255,0.5)), url(/public/images/book2.webp);
+    background: linear-gradient(rgba(85, 66, 66, 0.5)), url(../images/codeEditor2.png);
     background-size: cover;
 }
 

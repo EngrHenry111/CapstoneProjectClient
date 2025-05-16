@@ -36,7 +36,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin: 10px 0;
+   
+    margin-left: 0;
     
 }
 

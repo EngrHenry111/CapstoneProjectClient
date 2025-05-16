@@ -10,7 +10,7 @@ export const Post = () => {
   useEffect(() => {
     axios
       .get("https://capstoneprojectserver-1.onrender.com/posts/allPost")
-      //.then(res => res.json())
+     
       .then((res) => {
         setPosts(res.data.data);
       })
@@ -19,7 +19,7 @@ export const Post = () => {
 
   const handleDelete = async (postId) => {
     try {
-      //await axios.delete(`https://capstoneprojectserver-1.onrender.com/deletePost/${postId}`);
+     
    await axios.delete(`https://capstoneprojectserver-1.onrender.com/posts/deletePost/${postId}`);
 
 
@@ -72,54 +72,3 @@ export const Post = () => {
 
 
 
-// export const Post = () => {
-
-
- 
-
-//   const [post, setPost] = useState([]);
-//   useEffect(()=> {
-//     axios
-//       .get("https://capstoneprojectserver-1.onrender.com/posts/allPost")
-//       //.then(res => res.json())
-//       .then((Response) => {
-//         setPost(Response.data);
-
-//       })
-//       .catch((error) =>console.error(error));
-//   }, []);
-
-//   return (
-//     <div>  
-//         {post?.map(posts => <div key={posts?._id} className='post'>
-//        <img className='postImg' src={posts?.imageUrl} alt="Post" />
-
-//        <div className="postInfo">
-//         <div className="postCats">
-//           <span className="postCat">Music</span>
-//           <span className="postCat">Life</span>
-
-//         </div>
-//         <span  className="postTitle">
-//         {posts?.title}
-//         </span>
-//         <hr />
-//         <span  className="postTitle">
-//         {posts?.subtitle}
-//         </span>
-//         <hr />
-//         <span className="postDate">1 hour ago</span>
-//        </div>
-
-//        <p className='postDes'>
-      
-//        {posts?.content}
-//        </p>
-
-
-//     </div>
-//   )}
-//   </div>
-
-//   )
-// }

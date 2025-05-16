@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import  './topbar.css'
 import { Link, useNavigate } from 'react-router-dom';
 
 
 export const Topbar = ({user, setUser}) => {
   const navigate = useNavigate();
+  
 
   const handleLogout = ()=> {
     localStorage.removeItem("user");
     setUser(null);
     navigate("/login"); 
     //navigate("/register");
-  }
+
+   
+  };
 
  
   return (
@@ -51,9 +54,15 @@ export const Topbar = ({user, setUser}) => {
       <div className="top_r">
         {
           user ? (
-            <img className='topImage' 
-            src = "/images/image.jpg" alt="" />
+           
+              
+            <img  className='topImage ' 
+            src =  "/images/blogging2.png" alt= "" />
+            
+
+            
           ) :
+          
              (
             <ul className='topList'>
              <li className='topListItem'> 
