@@ -1,5 +1,7 @@
 
 
+
+
 .header{
     margin-top: 50px;
     margin-left: 0px;
@@ -24,8 +26,8 @@
 
 .headerTitlesm::before{
 
-      background: #0538c4;
-    animation: showRight 9s ease  forwards;
+     background: #0538c4;
+     animation: showRight 9s ease  forwards;
      animation-delay: 1s;
 }
 

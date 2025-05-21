@@ -48,8 +48,11 @@ import { useState } from "react";
 import { Sidebar } from "../../component/sideBar/sidebar";
 import axios from "axios";
 import "./settings.css";
+import { useParams } from "react-router-dom";
 
 export const Settings = () => {
+  
+  const {userId} = useParams();
   const [userName, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -57,7 +60,7 @@ export const Settings = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     const updatedUser = {
       userName,
       email,
@@ -74,9 +77,9 @@ export const Settings = () => {
       }
 
       // Replace USER_ID with the actual user ID, or retrieve it from auth
-      await axios.put(`https://capstoneprojectserver-1.onrender.com/users/updateUser`, updatedUser);
+      await axios.put(`https://capstoneprojectserver-1.onrender.com/users/updateUser/${userId}`, updatedUser);
      
-      alert("Profile updated successfully!");
+      alert(  "Profile updated successfully!");
     } catch (err) {
       console.error("Update failed:", err);
       
@@ -95,7 +98,7 @@ export const Settings = () => {
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
           <div className="settingsPP">
-            <img src={file ? URL.createObjectURL(file) : "/images/image2.jpg"} alt="profile" />
+            <img src={file ? URL.createObjectURL(file) : "/images/bac.jpg"} alt="profile" />
             <label htmlFor="fileInput">
               <i className="settingsPPIcon fa-solid fa-user"></i>
             </label> 

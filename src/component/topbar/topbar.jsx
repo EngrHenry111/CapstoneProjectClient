@@ -54,14 +54,11 @@ export const Topbar = ({user, setUser}) => {
       <div className="top_r">
         {
           user ? (
-           
-              
+                         
             <img  className='topImage ' 
             src =  "/images/blogging2.png" alt= "" />
-            
-
-            
-          ) :
+                    
+          ) : 
           
              (
             <ul className='topList'>

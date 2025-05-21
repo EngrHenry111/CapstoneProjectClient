@@ -1,4 +1,10 @@
 
+@media (max-width: 786px) {
+    .post{
+        width: 100vw;
+    }
+}
+
 .post{
     width: 800px;
     margin: 0px 25px 40px 25px;
@@ -44,17 +50,18 @@
 .postDate{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: italic;
-    font-size: 13px;
-    color: #999;
-    
+    font-size: 19px;
+  
     margin-left: 40px;
-    color: lightcoral;
-    box-shadow: 2px 1px 3px rgb(132, 177, 228);
+    margin-bottom: 0px;
+    color: teal;
+    box-shadow: 3px 2px 4px rgb(30, 119, 221);
+    border-radius: 20px;
 }
 
 .deleteButton {
-  margin-top: 7px;
-  margin-left: 590px;
+  margin-bottom: 22px;
+  margin-left: 700px;
   padding: 4px 12px;
   background-color: crimson;
   color: white;

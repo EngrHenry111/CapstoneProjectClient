@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import './post.css'
 import axios from 'axios'
+import moment from 'moment'
 
 export const Post = () => {
   const [posts, setPosts] = useState([]);
@@ -52,10 +53,19 @@ export const Post = () => {
           <p className='postDes'>
             {post?.content?.substring(0, 300)}
           </p>
+          
 
-           <span className="postDate">
+          <span className="postDate">
+            {moment(post?.createdAt).format('YYYY-MM-DD HH:mm:ss')}
+          </span>
+
+          {/* <span className="postDate">
+            {new Date(Date.parse(post?.createdAt)).toLocaleString()}
+          </span> */}
+
+           {/* <span className="postDate">
               {new Date(post?.createdAt).toDateString()}
-            </span>
+            </span> */}
 
              <button
             className="deleteButton"

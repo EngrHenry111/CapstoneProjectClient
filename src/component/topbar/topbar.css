@@ -1,3 +1,11 @@
+
+@media (mmax-width: 786px) {
+    .top{
+        width: 100vw;
+    }
+}
+
+
 .top{
     width: 100vw;
     height: 70px;
@@ -61,6 +69,8 @@
 .topListItem:hover{
     background: lightcoral;
     opacity: .4;
+    border-radius: 20px;
+    width: 60px;
 }
 
 .topSeachIcon{
