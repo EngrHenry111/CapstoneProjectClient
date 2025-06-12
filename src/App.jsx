@@ -37,7 +37,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/write" element={<Write />} />
             <Route path="/settings" element={<Settings />} />
-            <Route path="/post/:postId" element={<Single />} />
+            <Route path="/single/:postId" element={<Single />} />
             <Route path="*" element={<Navigate to="/" />} />
           </>
         )}

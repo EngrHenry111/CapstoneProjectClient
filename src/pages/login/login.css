@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(255,255, 255,0.5) ,rgba(255,255, 255,0.5)), url(../images/book.avif);
+    background: linear-gradient(rgba(255,255, 255,0.5) ,rgba(255,255, 255,0.5)), url(../images/bac.jpg);
     background-size: cover;
 }
 

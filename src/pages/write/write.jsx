@@ -48,7 +48,7 @@ export const Write = () => {
   return (
     <div className='write'>
         {/*Image Preview*/}
-       { previewImage &&  <img src="{previewImage}" alt="imagePreview" />}
+       { previewImage && <img src="{previewImage}" alt="imagePreview" />}
 
         <form onSubmit={handleSubmit} action="" className = "writeForm">
             <div className="writeFormGroup">

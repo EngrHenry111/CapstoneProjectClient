@@ -41,6 +41,10 @@ export const Topbar = ({user, setUser}) => {
         <Link className = 'link' to='/settings'> UPDATE </Link>
           </li> 
 
+          <li className =  'topListItem'>
+        <Link className = 'link' to='/single/:postId'> SINGLE</Link>
+          </li> 
+
            
           <li className = 'topListItem' onClick={handleLogout} >
           {user ? "LOGOUT": ""} 

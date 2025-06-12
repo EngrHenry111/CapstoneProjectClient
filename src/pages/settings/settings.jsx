@@ -102,6 +102,7 @@ export const Settings = () => {
             <label htmlFor="fileInput">
               <i className="settingsPPIcon fa-solid fa-user"></i>
             </label> 
+            
             <input
               type="file"
               id="fileInput"

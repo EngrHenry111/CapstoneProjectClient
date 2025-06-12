@@ -9,10 +9,11 @@
 }
 
 .singlePostImg{
-    width: 1000px;
-    height: 290px;
-    border-radius: 10px;
+    width: 700px;
+    height: 250px;
+    border-radius: 15px;
     object-fit: cover;
+   
 
 }
 
