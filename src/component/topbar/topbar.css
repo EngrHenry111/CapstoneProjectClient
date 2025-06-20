@@ -33,7 +33,7 @@
 
 .topIcon{
     font-size: 30px;
-    margin-left: 50px;
+    margin-left: 20px;
     color: #444;
     cursor: pointer;
 }
@@ -43,6 +43,21 @@
     height: 40px;
     border-radius: 50px;
     object-fit: cover;
+}
+
+@keyframes image {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+.topImage{
+    transform: image 8s linear  ;
 }
 
 
@@ -63,7 +78,6 @@
     font-family: 'Times New Roman', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     cursor: pointer;
     transition-duration: 5s;
-
 }
 
 .topListItem:hover{

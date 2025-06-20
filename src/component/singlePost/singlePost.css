@@ -17,21 +17,39 @@
 
 }
 
+@keyframes singlePostImg {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+  
+}
+
+  .singlePostImg{
+        animation: singlePostImg 8s linear ;
+    }
+
+
 .singlePostTitle{
     text-align: center;
     margin: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 30px;
+    margin-left: 50px;
+   
 }
 
 .singlePostEdit{
     float: right;
-    font-size: 12px;
+    font-size: 20px;
     cursor: pointer;
+    margin-right: 32px;
 }
 
 .singlePostIcon{
-    margin-left: 10px;
+    margin-left: 16px;
 
 }
 
@@ -45,6 +63,8 @@
 
 .singlePostInfo{
     margin-bottom: 20px;
+    margin-right: 32px;
+    margin-left: 32px;
     display: flex;
     justify-content: space-between;
     font-size: 15px;
@@ -55,6 +75,7 @@
     color: #666;
     font-size: 17px;
     line-height: 25px;
+
 }
 
 .singlePostDes::first-letter{

@@ -26,6 +26,22 @@
     text-align: center;
 }
 
+@keyframes sideTitle {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+    
+}
+
+.sidebarTitle{
+    transform: sideTitle 1s linear infinite  ;
+}
+
+
 .sideImg{
     width: 250px;
     border-radius: 10%;

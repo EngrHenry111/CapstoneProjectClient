@@ -23,6 +23,7 @@ export const SinglePost = () => {
           </span>
         </h1>
         <p className="singlePostDes">
+          
           Lorem ipsum dolor, sit amet consectetur adipisicing
            elit. Error, magni, necessitatibus repellat temporibus 
            rem quidem et impedit asperiores at molestias laboriosam fuga.
